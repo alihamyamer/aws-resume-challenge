@@ -17,6 +17,16 @@
                 <span>📱 778-522-3379</span>
                 <span>📍 Vancouver, Canada</span>
                 <span><a href="biography.html">Bio</a></span>
+                <div>Visitors: <span id="counter">Loading...</span></div>
+
+<script>
+  fetch("https://abc123xyz.execute-api.us-west-2.amazonaws.com/count")
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("counter").textContent = data.count;
+    })
+    .catch(err => console.error("Error:", err));
+</script>
             </div>
         </div>
 
