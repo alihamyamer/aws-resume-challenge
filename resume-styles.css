@@ -1,0 +1,382 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    font-size: 14px;
+}
+
+/* Container */
+.resume {
+    max-width: 8.5in;
+    margin: 20px auto;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0.75in;
+    min-height: 11in;
+}
+
+/* Header Section */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.header .title {
+    font-size: 16px;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 13px;
+}
+
+.contact-info span {
+    display: flex;
+    align-items: center;
+    color: #34495e;
+}
+
+.contact-info a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Section Styling */
+.section {
+    margin-bottom: 25px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #bdc3c7;
+    padding-bottom: 5px;
+}
+
+/* Experience and Education Items */
+.experience-item,
+.education-item {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.experience-item:last-child,
+.education-item:last-child {
+    margin-bottom: 0;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+
+.job-title,
+.degree {
+    font-size: 15px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 2px;
+}
+
+.company,
+.school {
+    font-size: 14px;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+.date {
+    font-size: 13px;
+    color: #95a5a6;
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+.description {
+    margin-top: 8px;
+}
+
+.description ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.description li {
+    margin-bottom: 6px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.description li:before {
+    content: "•";
+    color: #3498db;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.skill-category {
+    background: #ecf0f1;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #3498db;
+}
+
+.skill-category h4 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.skill-list {
+    font-size: 13px;
+    color: #34495e;
+    line-height: 1.5;
+}
+
+/* Projects Section */
+.project-item {
+    margin-bottom: 18px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-left: 3px solid #3498db;
+    border-radius: 0 5px 5px 0;
+}
+
+.project-title {
+    font-size: 15px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.project-tech {
+    font-size: 12px;
+    color: #7f8c8d;
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+.project-description {
+    font-size: 13px;
+    color: #34495e;
+    line-height: 1.5;
+}
+
+/* Summary/Objective Section */
+.summary {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #34495e;
+    text-align: justify;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #2c3e50;
+}
+
+/* Certifications */
+.certification-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 8px 0;
+    border-bottom: 1px dotted #bdc3c7;
+}
+
+.certification-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.certification-name {
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 14px;
+}
+
+.certification-issuer {
+    color: #7f8c8d;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.certification-date {
+    color: #95a5a6;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+/* Awards Section */
+.award-item {
+    margin-bottom: 12px;
+    padding: 10px;
+    background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+    border-left: 4px solid #f39c12;
+    border-radius: 0 5px 5px 0;
+}
+
+.award-name {
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+.award-description {
+    font-size: 13px;
+    color: #34495e;
+}
+
+/* Languages Section */
+.languages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.language-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background: #ecf0f1;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+.language-name {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.language-level {
+    color: #7f8c8d;
+    font-size: 12px;
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white;
+        font-size: 12px;
+    }
+    
+    .resume {
+        box-shadow: none;
+        margin: 0;
+        padding: 0.5in;
+        max-width: none;
+    }
+    
+    .header h1 {
+        font-size: 24px;
+    }
+    
+    .section-title {
+        font-size: 16px;
+    }
+    
+    .contact-info {
+        font-size: 11px;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .project-item,
+    .award-item {
+        background: white;
+        border: 1px solid #ddd;
+    }
+    
+    .skill-category {
+        background: white;
+        border: 1px solid #ddd;
+    }
+    
+    .summary {
+        background: white;
+        border: 1px solid #ddd;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .resume {
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    .header h1 {
+        font-size: 24px;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    
+    .item-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .date {
+        margin-top: 3px;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .languages-grid {
+        grid-template-columns: 1fr;
+    }
+}
