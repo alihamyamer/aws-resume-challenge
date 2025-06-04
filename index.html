@@ -19,14 +19,14 @@
                 <span><a href="biography.html">Bio</a></span>
                 <div>Visitors: <span id="counter">Loading...</span></div>
 
-<script>
-  fetch("https://d3krbrzf3i.execute-api.us-east-1.amazonaws.com/prod/")
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById("counter").textContent = data.count;
-    })
-    .catch(err => console.error("Error:", err));
-</script>
+     <script>
+                    fetch("https://d3krbrzf3i.execute-api.us-east-1.amazonaws.com/count")
+                      .then(response => response.json())
+                      .then(data => {
+                        document.getElementById("counter").textContent = data.count;
+                      })
+                      .catch(err => console.error("Error fetching visitor count:", err));
+         </script>
             </div>
         </div>
 
