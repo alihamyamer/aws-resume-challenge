@@ -20,7 +20,7 @@
                 <div>Visitors: <span id="counter">Loading...</span></div>
 
 <script>
-  fetch("https://abc123xyz.execute-api.us-west-2.amazonaws.com/count")
+  fetch("https://d3krbrzf3i.execute-api.us-east-1.amazonaws.com")
     .then(response => response.json())
     .then(data => {
       document.getElementById("counter").textContent = data.count;
@@ -28,7 +28,7 @@
     .catch(err => console.error("Error:", err));
 </script>
             </div>
-        </div>
+        </div>x
 
         <!-- Summary Section -->
         <div class="section">
