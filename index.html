@@ -20,7 +20,7 @@
                 <div>Visitors: <span id="counter">Loading...</span></div>
 
 <script>
-  fetch("https://d3krbrzf3i.execute-api.us-east-1.amazonaws.com")
+  fetch("https://d3krbrzf3i.execute-api.us-east-1.amazonaws.com/prod/visitors")
     .then(response => response.json())
     .then(data => {
       document.getElementById("counter").textContent = data.count;
