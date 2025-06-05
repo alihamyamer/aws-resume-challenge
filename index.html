@@ -1,72 +1,62 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ali Abuelnasr - Resume</title>
-    <link rel="stylesheet" href="resume-styles.css">
+    <title>Ali Abuelnasr - Portfolio</title>
+    <link rel="stylesheet" href="dark-portfolio-styles.css">
 </head>
 <body>
-    <div class="resume">
-        <!-- Header Section -->
-        <div class="header">
-            <h1>Ali Abuelnasr</h1>
-            <div class="title">Aspiring Solutions Architect</div>
-            <div class="contact-info">
-                <span>📧 alihamyamer@gmail.com</span>
-                <span>📱 778-522-3379</span>
-                <span>📍 Vancouver, Canada</span>
-                <span><a href="biography.html">Bio</a></span>
-                <div>
-                    Visitors: <span id="counter">Loading...</span>
-                  </div>
-                  
-                  <script>
-                    fetch("https://d3krbrzf3i.execute-api.us-east-1.amazonaws.com/prod/count")
-                      .then(response => response.json())
-                      .then(data => {
-                        console.log("API response:", data);
-                        document.getElementById("counter").innerText = data.count;
-                      })
-                      .catch(error => {
-                        console.error("Error fetching visitor count:", error);
-                        document.getElementById("counter").innerText = "Error";
-                      });
-                  </script>
-
-        <!-- Summary Section -->
-        <div class="section">
-            <h2 class="section-title">Summary</h2>
-            <div class="summary">
-                Aspiring Solutions Architect with a background in Operations
-            </div>
+    <div class="container">
+        <!-- Profile Section -->
+        <div class="profile-image">👤</div>
+        <h1 class="name">Ali Abuelnasr</h1>
+        <p class="title">Aspiring Solutions Architect | Operations Expert</p>
+        
+        <!-- Navigation -->
+        <nav class="navigation">
+            <a href="#" class="nav-link active" onclick="showSection('about')">About</a>
+            <a href="#" class="nav-link" onclick="showSection('experience')">Experience</a>
+            <a href="#" class="nav-link" onclick="showSection('education')">Education</a>
+            <a href="#" class="nav-link" onclick="showSection('skills')">Skills</a>
+            <a href="#" class="nav-link" onclick="showSection('contact')">Contact</a>
+        </nav>
+        
+        <!-- Page Views Counter -->
+        <div class="page-views">Page Views: <span id="counter">Loading...</span></div>
+        
+        <!-- Content Sections -->
+        <div id="about" class="content-section active">
+            <h2 class="section-title">About</h2>
+            <p class="about-text">
+                Aspiring Solutions Architect with a strong background in Operations Management. 
+                Experienced in leading teams, optimizing processes, and driving operational excellence. 
+                Currently expanding expertise in cloud architecture and AWS services to transition into solutions architecture role.
+            </p>
         </div>
 
-     <!-- Experience Section -->
-         <div class="section">
+        <div id="experience" class="content-section">
             <h2 class="section-title">Experience</h2>
             <div class="experience-item">
                 <div class="item-header">
                     <div>
-                    <div class="job-title">Operations Manager - Amazon  /div>   
+                        <div class="job-title">Operations Manager</div>
+                        <div class="company">Amazon</div>
                     </div>
-                <div class="date">2025–Present</div></div>
+                    <div class="date">2025–Present</div>
+                </div>
                 <div class="description">
-                    <ul>
-                        <li> Utilized SQL to automate pick quality reporting metrics resulting in a 13% improvement in pick quality</li>
-                        <li> Faciliated roundtables among key process stakeholders to identify barriers to ownership within Problem Solve Role</li>
-                        <li> Designed and implemented a scalable, event-driven data architecture that automated manual reporting and data collection workflows across multiple systems and teams—resulting in a 160 FTE reduction in operational effort.</li>
-                      </ul>
+                    <p>Lead cross-functional teams to optimize operational processes and improve efficiency. Implement data-driven solutions to reduce operational costs and enhance performance.</p>
                 </div>
             </div>
         </div>
 
-        <!-- Education Section -->
-        <div class="section">
+        <div id="education" class="content-section">
+            <h2 class="section-title">Education</h2>
             <div class="education-item">
                 <div class="item-header">
                     <div>
-                        <div class="degree">Bachelor of Arts in Economics, Political Science & Philosophy</div>
+                        <div class="degree-title">Bachelor of Arts in Economics, Political Science & Philosophy</div>
                         <div class="school">The University of British Columbia | Vancouver, BC</div>
                     </div>
                     <div class="date">05/2024</div>
@@ -79,48 +69,73 @@
             </div>
         </div>
 
-        <!-- Skills Section -->
-        <div class="section">
+        <div id="skills" class="content-section">
             <h2 class="section-title">Skills</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h4>Soft Skills</h4>
+                    <h3>Soft Skills</h3>
                     <div class="skill-list">
                         <ul>
                             <li>Written and Verbal Communication</li>
                             <li>Customer-Centric Thinking</li>
                             <li>Highly Adaptable</li>
+                            <li>Team Leadership</li>
                         </ul>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h4>Technical Skills</h4>
+                    <h3>Technical Skills</h3>
                     <div class="skill-list">
                         <ul>
                             <li>Architecture & Design Patterns</li>
                             <li>Programming/Scripting</li>
+                            <li>AWS Cloud Services</li>
+                            <li>Data Analysis</li>
                         </ul>
                     </div>
                 </div>
             </div>
+            
+            <h3 style="margin-top: 40px; margin-bottom: 20px; text-align: center; color: #ffffff;">Certifications</h3>
+            <div class="certification-item">
+                <div class="cert-name">AWS Certified Cloud Practitioner</div>
+                <div class="cert-date">2025</div>
+            </div>
+            <div class="certification-item">
+                <div class="cert-name">AWS Solutions Architect Associate</div>
+                <div class="cert-date">2025</div>
+            </div>
         </div>
 
-        <!-- Certifications Section -->
-        <div class="section">
-            <h2 class="section-title">Certifications</h2>
-            <div class="certification-item">
-                <div>
-                    <div class="certification-name">AWS Certified Cloud Practitioner</div>
-                </div>
-                <div class="certification-date">2025</div>
-            </div>
-            <div class="certification-item">
-                <div>
-                    <div class="certification-name">AWS Solutions Architect Associate</div>
-                </div>
-                <div class="certification-date">2025</div>
+        <div id="contact" class="content-section">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-info">
+                <div class="contact-item">📧 <a href="mailto:alihamyamer@gmail.com">alihamyamer@gmail.com</a></div>
+                <div class="contact-item">📱 778-522-3379</div>
+                <div class="contact-item">📍 Vancouver, Canada</div>
+                <div class="contact-item"><a href="biography.html">View Bio</a></div>
             </div>
         </div>
+        
+        <!-- Footer -->
+        <div class="footer">© 2024 Ali Abuelnasr. All rights reserved.</div>
     </div>
-</body>
+ 
+ <div>
+    Visitors: <span id="counter">Loading...</span>
+</div>
+                  
+<script>
+    fetch("https://d3krbrzf3i.execute-api.us-east-1.amazonaws.com/prod/count")
+     .then(response => response.json())
+     .then(data => {
+     console.log("API response:", data);
+     document.getElementById("counter").innerText = data.count;
+     })
+     .catch(error => {
+    console.error("Error fetching visitor count:", error);
+    document.getElementById("counter").innerText = "Error";
+    });
+</script>
+/body>
 </html>
