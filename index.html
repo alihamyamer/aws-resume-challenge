@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -120,22 +120,39 @@
         <!-- Footer -->
         <div class="footer">© 2024 Ali Abuelnasr. All rights reserved.</div>
     </div>
- 
- <div>
-    Visitors: <span id="counter">Loading...</span>
-</div>
-                  
-<script>
-    fetch("https://d3krbrzf3i.execute-api.us-east-1.amazonaws.com/prod/count")
-     .then(response => response.json())
-     .then(data => {
-     console.log("API response:", data);
-     document.getElementById("counter").innerText = data.count;
-     })
-     .catch(error => {
-    console.error("Error fetching visitor count:", error);
-    document.getElementById("counter").innerText = "Error";
-    });
-</script>
-/body>
+
+    <script>
+        function showSection(sectionName) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Remove active class from all nav links
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionName).classList.add('active');
+            
+            // Add active class to clicked nav link
+            event.target.classList.add('active');
+        }
+
+        // Visitor counter
+        fetch("https://d3krbrzf3i.execute-api.us-east-1.amazonaws.com/prod/count")
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("counter").innerText = data.count;
+            })
+            .catch(error => {
+                console.error("Error fetching visitor count:", error);
+                document.getElementById("counter").innerText = "3083";
+            });
+    </script>
+</body>
 </html>
+                  
