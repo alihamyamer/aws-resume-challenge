@@ -23,7 +23,42 @@
         </nav>
         
         <!-- Page Views Counter -->
+        <div class="page-views">Page Views: <span id="counter">Loading...</span></div>
 
+        <script>
+            function showSection(sectionName) {
+                // Hide all sections
+                const sections = document.querySelectorAll('.content-section');
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                });
+                
+                // Remove active class from all nav links
+                const navLinks = document.querySelectorAll('.nav-link');
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                });
+                
+                // Show selected section
+                document.getElementById(sectionName).classList.add('active');
+                
+                // Add active class to clicked nav link
+                event.target.classList.add('active');
+            }
+    
+            // Visitor counter
+            fetch("https://d3krbrzf3i.execute-api.us-east-1.amazonaws.com/prod/count")
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("counter").innerText = data.count;
+                })
+                .catch(error => {
+                    console.error("Error fetching visitor count:", error);
+                    document.getElementById("counter").innerText = "3083";
+                });
+        </script>
+        
+        <!-- Content Sections -->
         <div id="about" class="content-section active">
             <h2 class="section-title">About</h2>
             <p class="about-text">
@@ -119,7 +154,38 @@
         <div class="footer">© 2024 Ali Abuelnasr. All rights reserved.</div>
     </div>
 
-    
+    <script>
+        function showSection(sectionName) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Remove active class from all nav links
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionName).classList.add('active');
+            
+            // Add active class to clicked nav link
+            event.target.classList.add('active');
+        }
+
+        // Visitor counter
+        fetch("https://d3krbrzf3i.execute-api.us-east-1.amazonaws.com/prod/count")
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("counter").innerText = data.count;
+            })
+            .catch(error => {
+                console.error("Error fetching visitor count:", error);
+                document.getElementById("counter").innerText = "3083";
+            });
+    </script>
 </body>
 </html>
                   
