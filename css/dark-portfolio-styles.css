@@ -46,16 +46,27 @@ body {
 .image-container img {
     cursor: pointer;
     transition: all 0.3s ease;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated; /* For pixel art */
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 .image-container img.expanded {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(10);
+    transform: translate(-50%, -50%) scale(6);
     z-index: 1000;
     transform-origin: center center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+     /* Better rendering for scaled images */
+     image-rendering: -webkit-optimize-contrast;
+     image-rendering: crisp-edges;
+     backface-visibility: hidden;
+     -webkit-backface-visibility: hidden;
+ }
 }
 
 /* Optional: Add dark overlay behind expanded image */
