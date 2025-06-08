@@ -52,7 +52,7 @@ body {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(2);
+    transform: translate(-50%, -50%) scale(10);
     z-index: 1000;
     transform-origin: center center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
