@@ -38,6 +38,17 @@ body {
     color: #ccc;
 }
 
+.image-container img {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.image-container img.expanded {
+    transform: scale(1.8);
+    z-index: 10;
+    position: relative;
+}
+
 .name {
     font-size: 3rem;
     font-weight: 300;
