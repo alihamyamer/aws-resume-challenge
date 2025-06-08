@@ -48,9 +48,7 @@ body {
     transition: all 0.3s ease;
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
-    image-rendering: pixelated; /* For pixel art */
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
+
 }
 
 .image-container img.expanded {
