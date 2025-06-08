@@ -38,19 +38,43 @@ body {
     color: #ccc;
 }
 
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
 .image-container img {
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .image-container img.expanded {
-    transform: scale(5);
-    z-index: 1000;
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: scale(1.8) translate(-50%, -50%);
-    transform-origin: center;
+    transform: translate(-50%, -50%) scale(2);
+    z-index: 1000;
+    transform-origin: center center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+}
+
+/* Optional: Add dark overlay behind expanded image */
+.image-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.image-overlay.active {
+    opacity: 1;
+    visibility: visible;
 }
 
 .name {
