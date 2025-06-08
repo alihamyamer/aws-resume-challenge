@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ali Abuelnasr - Portfolio</title>
     <link rel="stylesheet" href="css/dark-portfolio-styles.css">
+    <!-- ==== ADDED: External JavaScript file link ==== -->
+    <script src="js/expandable-images.js"></script>
 </head>
 <body>
     <div class="container">
         <!-- Profile Section -->
-        <img src="images/profile-pic.jpeg" alt="Ali Abuelnasr" class="profile-image">
+        <!-- ==== MODIFIED: Wrapped profile image in expandable container ==== -->
+        <div class="image-container">
+            <img src="images/profile-pic.jpeg" alt="Ali Abuelnasr" class="profile-image">
+        </div>
         <h1 class="name">Ali Abuelnasr</h1>
         <p class="title">Aspiring Solutions Architect | Operations Manager</p>
         
@@ -245,4 +250,3 @@
     </script>
 </body>
 </html>
-                  
